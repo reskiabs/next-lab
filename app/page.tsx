@@ -1,4 +1,11 @@
+"use client";
+
 import { useEffect, useState } from "react";
+
+type ApiResponseType = {
+  id: number;
+  title: string;
+};
 
 export default function Home() {
   const [data, setData] = useState([]);
@@ -9,5 +16,11 @@ export default function Home() {
       .then(setData);
   }, []);
 
-  return <div>{JSON.stringify(data)}</div>;
+  return (
+    <div>
+      {data.map((item: ApiResponseType) => (
+        <p key={item.id}>{item.title}</p>
+      ))}
+    </div>
+  );
 }
