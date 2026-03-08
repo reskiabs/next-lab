@@ -4,7 +4,10 @@ type Post = {
 };
 
 export default async function Page() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  console.log("SSG BLOG");
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+    next: { revalidate: 3 },
+  });
 
   const posts: Post[] = await res.json();
 

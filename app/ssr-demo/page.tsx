@@ -4,6 +4,7 @@ type Article = {
 };
 
 export default async function Page() {
+  console.log("SSR FETCH");
   const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
     cache: "no-store",
   });
