@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 export default function Home() {
@@ -10,6 +12,10 @@ export default function Home() {
         <div className="flex gap-6">
           <Link href="/ssr-demo" className="hover:underline">
             SSR Demo
+          </Link>
+
+          <Link href="/blog" className="hover:underline">
+            Blog
           </Link>
 
           <Link href="/articles" className="hover:underline">
