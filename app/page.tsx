@@ -8,8 +8,8 @@ export default function Home() {
         <h1 className="text-xl font-semibold">Next Tech Lab</h1>
 
         <div className="flex gap-6">
-          <Link href="/articles" className="hover:underline">
-            Home
+          <Link href="/ssr-demo" className="hover:underline">
+            SSR Demo
           </Link>
 
           <Link href="/articles" className="hover:underline">
